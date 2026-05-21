@@ -122,7 +122,7 @@
       align-items: center;
       background:
         linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.22)),
-        url('images/Collezione/collezione-6.jpg') center/cover;
+        url('images/Collezione/collezione-5.jpg') center/cover;
       color: var(--white);
     }
 
@@ -276,26 +276,20 @@
       border-radius: 22px;
       padding: 24px;
       background: #faf8f4;
+      color: var(--muted);
     }
 
     .feature strong {
       display: block;
       margin-bottom: 8px;
       font-size: 17px;
-    }
-
-    .feature {
-      color: var(--muted);
-    }
-
-    .feature strong {
       color: var(--dark);
     }
 
     .collection-grid {
       display: grid;
-      grid-template-columns: 1.2fr .8fr .8fr;
-      grid-auto-rows: 260px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 320px;
       gap: 18px;
     }
 
@@ -318,10 +312,6 @@
     .collection-item:hover img {
       transform: scale(1.05);
       opacity: .9;
-    }
-
-    .collection-item:first-child {
-      grid-row: span 2;
     }
 
     .quote {
@@ -417,12 +407,8 @@
       }
 
       .collection-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 280px;
-      }
-
-      .collection-item:first-child {
-        grid-row: span 1;
       }
 
       .section-title {
@@ -436,7 +422,8 @@
 
     @media (max-width: 560px) {
       .categories,
-      .features {
+      .features,
+      .collection-grid {
         grid-template-columns: 1fr;
       }
 
@@ -604,10 +591,6 @@
 
         <div class="collection-grid">
           <div class="collection-item">
-            <img src="images/Collezione/collezione-1.jpg" alt="Bagno moderno con lavabo e rivestimenti chiari" />
-          </div>
-
-          <div class="collection-item">
             <img src="images/Collezione/collezione-2.jpg" alt="Bagno contemporaneo con rivestimenti materici" />
           </div>
 
@@ -621,10 +604,6 @@
 
           <div class="collection-item">
             <img src="images/Collezione/collezione-5.jpg" alt="Bagno dal design caldo con vasca e lavabi" />
-          </div>
-
-          <div class="collection-item">
-            <img src="images/Collezione/collezione-6.jpg" alt="Bagno moderno con sanitari sospesi" />
           </div>
         </div>
       </div>
@@ -650,8 +629,18 @@
           </div>
 
           <div class="contact-row">
+            <span>Telefono</span>
+            <strong><a href="tel:+390804553665">+39 080 455 3665</a></strong>
+          </div>
+
+          <div class="contact-row">
+            <span>Instagram</span>
+            <strong><a href="https://www.instagram.com/striceram.srl/" target="_blank">striceram.srl</a></strong>
+          </div>
+
+          <div class="contact-row">
             <span>Indirizzo</span>
-            <strong>Via Vrisceglie, 1 · Capurso (BA)</strong>
+            <strong>Via Vrisceglie 3, Capurso (BA)</strong>
           </div>
 
           <div class="contact-row">
@@ -667,7 +656,7 @@
         <div class="section-title">
           <h2>Dove siamo</h2>
           <p>
-            Ti aspettiamo nel nostro showroom in Via Vrisceglie, 1 a Capurso, in provincia di Bari.
+            Ti aspettiamo nel nostro showroom in Via Vrisceglie 3, Capurso (BA).
           </p>
         </div>
 
@@ -690,8 +679,10 @@
       </div>
 
       <div>
-        <p>Via Vrisceglie, 1 · Capurso (BA)</p>
+        <p>Via Vrisceglie 3, Capurso (BA)</p>
+        <p><a href="tel:+390804553665">+39 080 455 3665</a></p>
         <p><a href="mailto:acquisti@striceram.it">acquisti@striceram.it</a></p>
+        <p><a href="https://www.instagram.com/striceram.srl/" target="_blank">Instagram: striceram.srl</a></p>
       </div>
     </div>
   </footer>
