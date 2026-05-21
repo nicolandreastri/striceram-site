@@ -77,7 +77,7 @@
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      gap: 26px;
       align-items: center;
       font-size: 15px;
     }
@@ -318,29 +318,30 @@
       opacity: .9;
     }
 
-    .quote {
+    .contact-section {
       background: var(--dark);
       color: var(--white);
     }
 
-    .quote-box {
+    .contact-box {
       display: grid;
       grid-template-columns: 1fr .8fr;
       gap: 36px;
       align-items: center;
     }
 
-    .quote h2 {
+    .contact-section h2 {
       font-family: Georgia, 'Times New Roman', serif;
       font-size: clamp(36px, 5vw, 64px);
       line-height: 1.05;
       margin-bottom: 20px;
     }
 
-    .quote p {
+    .contact-section p {
       color: rgba(255,255,255,.76);
       font-size: 18px;
       margin-bottom: 28px;
+      max-width: 620px;
     }
 
     .contact-card {
@@ -352,7 +353,7 @@
     }
 
     .contact-row {
-      padding: 18px 0;
+      padding: 20px 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -367,27 +368,33 @@
       margin-bottom: 4px;
     }
 
-    .instagram-link {
-      display: inline-flex;
-      width: 34px;
-      height: 34px;
+    .preventivo {
+      background: var(--cream);
+    }
+
+    .preventivo-box {
+      background: var(--white);
+      border-radius: 34px;
+      padding: 54px;
+      box-shadow: 0 14px 40px rgba(0,0,0,.08);
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: var(--dark);
-      color: var(--white);
-      transition: .25s ease;
+      gap: 32px;
+      flex-wrap: wrap;
     }
 
-    .instagram-link:hover {
-      transform: translateY(-2px);
-      background: var(--soft-dark);
+    .preventivo h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.05;
+      margin-bottom: 14px;
     }
 
-    .instagram-link svg {
-      width: 19px;
-      height: 19px;
-      fill: currentColor;
+    .preventivo p {
+      color: var(--muted);
+      max-width: 620px;
+      font-size: 18px;
     }
 
     .map iframe {
@@ -430,6 +437,36 @@
       margin-top: 10px;
     }
 
+    .instagram-link {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--dark);
+      transition: .25s ease;
+    }
+
+    .instagram-link:hover {
+      transform: translateY(-2px);
+      background: var(--sand);
+    }
+
+    .instagram-link svg {
+      width: 19px;
+      height: 19px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 1020px) {
+      .nav-links {
+        gap: 18px;
+        font-size: 14px;
+      }
+    }
+
     @media (max-width: 920px) {
       .nav-links {
         display: none;
@@ -439,7 +476,7 @@
         grid-template-columns: repeat(2,1fr);
       }
 
-      .quote-box {
+      .contact-box {
         grid-template-columns: 1fr;
       }
 
@@ -488,6 +525,10 @@
       .hero p {
         font-size: 18px;
       }
+
+      .preventivo-box {
+        padding: 34px 24px;
+      }
     }
   </style>
 </head>
@@ -500,11 +541,12 @@
       <a href="#home" class="logo">STRICERAM</a>
 
       <div class="nav-links">
-        <a href="#prodotti">Prodotti</a>
+        <a href="#categorie">Categorie</a>
         <a href="#chi-siamo">Chi siamo</a>
         <a href="#collezione">Collezione</a>
+        <a href="#contatti">Contatti</a>
         <a href="#dove-siamo">Dove siamo</a>
-        <a class="btn btn-primary" href="mailto:acquisti@striceram.it?subject=Richiesta%20preventivo%20Striceram">Richiedi preventivo</a>
+        <a class="btn btn-primary" href="#preventivo">Preventivo</a>
       </div>
     </nav>
   </header>
@@ -521,16 +563,16 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:acquisti@striceram.it?subject=Richiesta%20preventivo%20Striceram">Richiedi un preventivo</a>
-          <a class="btn btn-light" href="#prodotti">Scopri le soluzioni</a>
+          <a class="btn btn-primary" href="#preventivo">Richiedi un preventivo</a>
+          <a class="btn btn-light" href="#categorie">Scopri le categorie</a>
         </div>
       </div>
     </section>
 
-    <section id="prodotti">
+    <section id="categorie">
       <div class="container">
         <div class="section-title">
-          <h2>Soluzioni per la casa e il bagno</h2>
+          <h2>Categorie</h2>
           <p>
             Una selezione pensata per chi cerca qualità, resistenza e uno stile capace di valorizzare ogni spazio,
             dal progetto residenziale alla ristrutturazione completa.
@@ -679,17 +721,15 @@
       </div>
     </section>
 
-    <section class="quote" id="preventivo">
-      <div class="container quote-box">
+    <section class="contact-section" id="contatti">
+      <div class="container contact-box">
         <div>
-          <span class="eyebrow">Preventivi e consulenza</span>
-          <h2>Hai un progetto? Raccontacelo.</h2>
+          <span class="eyebrow">Contatti</span>
+          <h2>Vieni a trovarci o contattaci.</h2>
           <p>
-            Per informazioni sui prodotti, disponibilità o preventivi personalizzati, scrivici via email.
-            Ti aiuteremo a individuare la soluzione più adatta alle tue esigenze.
+            Per informazioni sui prodotti, disponibilità o consulenze personalizzate,
+            puoi contattarci telefonicamente, via email o raggiungerci direttamente nel nostro showroom.
           </p>
-
-          <a class="btn btn-light" href="mailto:acquisti@striceram.it?subject=Richiesta%20preventivo%20Striceram">Scrivi a Striceram</a>
         </div>
 
         <div class="contact-card">
@@ -704,22 +744,8 @@
           </div>
 
           <div class="contact-row">
-            <span>Instagram</span>
-            <a class="instagram-link" href="https://www.instagram.com/striceram.srl/" target="_blank" aria-label="Instagram Striceram">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/>
-              </svg>
-            </a>
-          </div>
-
-          <div class="contact-row">
             <span>Indirizzo</span>
             <strong>Via Vrisceglie 3, Capurso (BA)</strong>
-          </div>
-
-          <div class="contact-row">
-            <span>Consigliato</span>
-            <strong>Porta misure, foto o planimetria: potremo consigliarti meglio.</strong>
           </div>
         </div>
       </div>
@@ -740,6 +766,23 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+      </div>
+    </section>
+
+    <section class="preventivo" id="preventivo">
+      <div class="container">
+        <div class="preventivo-box">
+          <div>
+            <span class="eyebrow">Preventivo</span>
+            <h2>Hai un progetto? Raccontacelo.</h2>
+            <p>
+              Inviaci misure, foto o planimetria: ti aiuteremo a individuare materiali,
+              finiture e soluzioni più adatte alle tue esigenze.
+            </p>
+          </div>
+
+          <a class="btn btn-primary" href="mailto:acquisti@striceram.it?subject=Richiesta%20preventivo%20Striceram">Richiedi preventivo</a>
+        </div>
       </div>
     </section>
 
